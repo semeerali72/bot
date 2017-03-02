@@ -32,7 +32,7 @@ def makeWebhookResult(req):
     parameters = result.get("parameters")
     zone = parameters.get("shipping-zone")
 
-    cost = {'enable_hystrix':0, 'disable_hystrix':1, 'enable_chaosmonkey':2, 'enable_chaosmonkey':3}
+    cost = {'enablehystrix':0, 'disablehystrix':1, 'enablechaosmonkey':2, 'enablechaosmonkey':3}
 
     speech =  zone + " value is" + str(cost[zone]) 
 
