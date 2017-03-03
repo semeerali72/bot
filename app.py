@@ -26,15 +26,15 @@ def webhook():
     return r
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") != "shipping.cost":
+    if req.get("result").get("action") != "service.value":
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    zone = parameters.get("shipping-zone")
+    service = parameters.get("services")
 
-    cost = {'enablehystrix':0, 'disablehystrix':1, 'enablechaosmonkey':2, 'disablechaosmonkey':3}
+    value = {'enablehystrix':0, 'disablehystrix':1, 'enablechaosmonkey':2, 'disablechaosmonkey':3}
 
-    speech =  zone + " value is " + str(cost[zone]) 
+    speech =  service + " value is " + str(value[service]) 
 
     print("Response:")
     print(speech)
