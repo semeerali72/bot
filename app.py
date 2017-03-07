@@ -44,7 +44,7 @@ def makeWebhookResult(req):
         "displayText": speech
         #"data": {},
         # "contextOut": [],
-        "source": "apiai-resilint_bot"
+        "source": "apiai-resilient_bot"
     }
 
 
